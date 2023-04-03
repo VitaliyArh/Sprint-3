@@ -2,12 +2,6 @@ from selenium.webdriver.common.by import By
 
 class Locator:
 
-	url = 'https://stellarburgers.nomoreparties.site/'      # тестовые данные
-	VALID_NAME = "vitaly_ark_08_vik"                        # тестовые данные
-	VALID_PASSWORD = 123456                                 # тестовые данные
-	VALID_EMAIL = "vitaly_ark_08_vik@yandex.ru"             # тестовые данные
-	INVALID_PASSWORD = '54321'                              # тестовые данные
-
 	CLICK_ON_LOGIN = (By.CLASS_NAME,"button_button__33qZ0")                                      # клик по кнопке "Войти в аккаунт" на главной странице
 	CLICK_ON_TEXT_SIGN_UP = (By.XPATH, "//p[1]/a[text()='Зарегистрироваться']")                  # клик по надписи Зарегистрироваться в форме авторизации
 	CLICK_ON_BUTTON_SIGN_UP = (By.XPATH, "//form/button[text()='Зарегистрироваться']")           # клик по кнопке Зарегистрироваться
@@ -36,8 +30,4 @@ class Locator:
 	WAIT_LABEL_PROFILE_OK = (By.XPATH, "//a[@href='/account/profile' and text()='Профиль']")     # Явное ожидание загрузки профиля личного кабинета
 	WAIT_LOGIN_PAGE = (By.XPATH, "//h2[contains(text(),'Вход')]")                                # явное ожидание загрузки страницы авторизации
 
-	PASSED_BULKA_SECTION = (By.XPATH, "//span[contains(text(),'Булки')]/parent::div")            # перешли в раздел "Булки"
-	PASSED_SAUCES_SECTION = (By.XPATH, "//span[contains(text(),'Соусы')]/parent::div")           # перешли в раздел "Соусы"
-	PASSED_STUFFING_SECTION = (By.XPATH, "//span[contains(text(),'Начинки')]/parent::div")       # перешли в раздел "Начинки"
-
-
+	NAME_FOOD = (By.XPATH, '//div[contains(@class, "current")]/span')                            # переход к разделам
